@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VARSA – Rain Should Never Stop You</title>
+  <meta name="description" content="VARSA is an umbrella-sharing concept for Indian cities: borrow at one station, return at another.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo" aria-label="VARSA home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16a12 12 0 0 1 24 0Z" fill="#5cc8ff"/><path d="M16 16v8a2.5 2.5 0 0 1-5 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      VARSA
+    </a>
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#how">How It Works</a>
+      <a href="#stations">Find a Station</a>
+      <a href="#about">About Us</a>
+      <div class="menu-cta">
+        <button class="btn ghost" data-auth="login">Login</button>
+        <button class="btn primary" data-auth="signup">Get Started</button>
+      </div>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="rain" id="rain" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <h1>Rain Should Never Stop You.</h1>
+      <p class="lead">VARSA is a shared-umbrella network for Indian cities. Pick one up at a public station when the sky opens, drop it at any other station when you're dry.</p>
+      <div class="row">
+        <a href="#stations" class="btn primary lg">Find an Umbrella</a>
+        <a href="#how" class="btn outline lg">How It Works</a>
+      </div>
+      <p class="note">Concept preview. Stations, availability and rentals on this site are simulated.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 420" class="umbrella">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fdcff"/><stop offset="1" stop-color="#2a7be0"/></linearGradient></defs>
+        <path d="M30 210C30 110 105 40 200 40s170 70 170 170c-22-26-50-26-72 0-22-26-50-26-73 0-22-26-50-26-72 0-22-26-50-26-73 0Z" fill="url(#g)"/>
+        <path d="M200 40v170M130 60c-20 40-26 90-26 140M270 60c20 40 26 90 26 140" stroke="#0a1a3a" stroke-opacity=".25" stroke-width="3" fill="none"/>
+        <path d="M200 210v140a24 24 0 0 1-48 0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="200" cy="30" r="7" fill="#fff"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <h2 class="reveal">Three steps from drizzle to dry</h2>
+    <p class="sub reveal">No bookings, no carrying one around "just in case".</p>
+    <ol class="steps">
+      <li class="card reveal">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6a18 18 0 0 0-18 18c0 14 18 34 18 34s18-20 18-34A18 18 0 0 0 32 6Z" fill="none" stroke="#2a7be0" stroke-width="3"/><circle cx="32" cy="24" r="6" fill="#5cc8ff"/></svg>
+        <span class="step-n">Step 1</span>
+        <h3>Find a nearby station</h3>
+        <p>Open the station finder to see the closest VARSA racks and how many umbrellas each has right now.</p>
+      </li>
+      <li class="card reveal">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 20V8h12M44 8h12v12M56 44v12H44M20 56H8V44" fill="none" stroke="#2a7be0" stroke-width="3" stroke-linecap="round"/><rect x="22" y="22" width="8" height="8" fill="#5cc8ff"/><rect x="34" y="22" width="8" height="8" fill="#0a1a3a"/><rect x="22" y="34" width="8" height="8" fill="#0a1a3a"/><rect x="34" y="34" width="8" height="8" fill="#5cc8ff"/></svg>
+        <span class="step-n">Step 2</span>
+        <h3>Scan the QR and borrow</h3>
+        <p>Scan the code on the station, and the rack releases one umbrella. Try the simulated scan in the finder below.</p>
+      </li>
+      <li class="card reveal">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 30 32 12l18 18M20 26v26h24V26" fill="none" stroke="#2a7be0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M26 44h12" stroke="#5cc8ff" stroke-width="4" stroke-linecap="round"/></svg>
+        <span class="step-n">Step 3</span>
+        <h3>Return at any station</h3>
+        <p>Finished with it? Slide it into a free slot at any participating VARSA station, not just where you started.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ STATION FINDER ============ -->
+<section class="sec alt" id="stations">
+  <div class="wrap">
+    <h2 class="reveal">Find a station</h2>
+    <p class="sub reveal"><span class="badge">Demo data</span> These stations and counts are made-up samples to show how the finder will work. No real stations exist yet.</p>
+    <div class="finder reveal">
+      <label class="search"><span class="sr">Search stations</span>
+        <input id="q" type="search" placeholder="Search by place, area or city, e.g. Kolkata" autocomplete="off">
+      </label>
+      <div class="chips" id="chips" role="group" aria-label="Filter stations">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="avail">Umbrellas available</button>
+        <button class="chip" data-f="Metro">Metro</button>
+        <button class="chip" data-f="Campus">Campus</button>
+        <button class="chip" data-f="Office">Office hub</button>
+        <button class="chip" data-f="Tourist">Tourist spot</button>
+      </div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <h3>No stations match that search</h3>
+      <p>Try a city name like Mumbai, or clear the filters.</p>
+      <button class="btn primary" id="reset">Clear search</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY VARSA ============ -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <h2 class="reveal">Why VARSA</h2>
+    <div class="why">
+      <article class="card reveal"><h3>Convenient</h3><p>No umbrella in your bag on dry days, and one within a short walk when it pours.</p></article>
+      <article class="card reveal"><h3>Affordable</h3><p>Pay only for the time you use it, instead of buying an umbrella that gets lost or broken. Pricing will be announced at launch.</p></article>
+      <article class="card reveal"><h3>Sustainable</h3><p>One shared umbrella replaces many cheap single-season ones that end up in landfill.</p></article>
+      <article class="card reveal"><h3>Accessible</h3><p>Stations sit at public places like metro stops and campuses, so rain cover isn't limited to those who can plan ahead.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION / ABOUT ============ -->
+<section class="sec mission" id="about">
+  <div class="wrap narrow">
+    <h2 class="reveal">Our mission</h2>
+    <p class="big reveal">Everyone who travels through an Indian city in monsoon should be able to stay dry, whether or not they remembered an umbrella that morning.</p>
+    <p class="reveal">Japan showed that umbrella sharing works in crowded, rainy cities. VARSA adapts the idea for India: students heading to class, office workers on the commute, and visitors who didn't pack for the weather. We're an early-stage idea, and this site is a preview of the experience we want to build.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a href="#home" class="logo">VARSA</a>
+      <p>Shared umbrellas for rainy Indian cities.</p>
+    </div>
+    <nav aria-label="Footer">
+      <h4>Explore</h4>
+      <a href="#home">Home</a><a href="#how">How It Works</a><a href="#stations">Find a Station</a><a href="#about">About Us</a>
+    </nav>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:hello@varsa.example">hello@varsa.example</a>
+      <p class="small">Placeholder address for this demo.</p>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <a href="#" data-soon>Instagram</a><a href="#" data-soon>X (Twitter)</a><a href="#" data-soon>LinkedIn</a>
+    </div>
+  </div>
+  <div class="wrap copy">&copy; <span id="yr">2026</span> VARSA. All rights reserved. Concept website with simulated features.</div>
+</footer>
+
+<!-- ============ MODAL: LOGIN / SIGNUP ============ -->
+<div class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" hidden>
+  <div class="panel">
+    <button class="x" data-close aria-label="Close">&times;</button>
+    <h3 id="authTitle">Welcome to VARSA</h3>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tabLogin" data-tab="login" aria-selected="true">Login</button>
+      <button role="tab" id="tabSignup" data-tab="signup" aria-selected="false">Sign up</button>
+    </div>
+    <form id="authForm" novalidate>
+      <div class="field" data-for="signup"><label for="fName">Full name</label><input id="fName" autocomplete="name"><small class="err"></small></div>
+      <div class="field"><label for="fEmail">Email</label><input id="fEmail" type="email" autocomplete="email"><small class="err"></small></div>
+      <div class="field"><label for="fPass">Password</label><input id="fPass" type="password" autocomplete="current-password"><small class="err"></small></div>
+      <div class="field" data-for="signup"><label for="fPass2">Confirm password</label><input id="fPass2" type="password" autocomplete="new-password"><small class="err"></small></div>
+      <button class="btn primary full" id="authSubmit" type="submit">Login</button>
+      <p class="fine" id="authMsg" role="status">Demo only: nothing is sent or saved anywhere.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ============ MODAL: DEMO QR SCAN ============ -->
+<div class="modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle" hidden>
+  <div class="panel center">
+    <button class="x" data-close aria-label="Close">&times;</button>
+    <span class="badge">Simulation</span>
+    <h3 id="qrTitle">Scan to borrow</h3>
+    <p id="qrStation" class="fine"></p>
+    <div class="qr"><canvas id="qrCanvas" width="210" height="210" aria-label="Sample QR pattern"></canvas><i class="scanline" id="scanline"></i></div>
+    <button class="btn primary full" id="scanBtn">Simulate scan</button>
+    <p class="fine" id="qrMsg" role="status">This is a demo. No umbrella is released, no payment is taken and no camera is used.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
